@@ -10,7 +10,3 @@ Game of Knights:
 ### To run the app, use:
 
 `ts-node ./src/app.ts`
-
-### To run the tests:
-
-`npm run test`
