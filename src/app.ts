@@ -9,14 +9,10 @@ interface Knight {
 
 type Board = Knight[];
 
-const board: Board = [
-  { health: INITIAL_HEALTH, name: "K1" },
-  { health: INITIAL_HEALTH, name: "K2" },
-  { health: INITIAL_HEALTH, name: "K3" },
-  { health: INITIAL_HEALTH, name: "K4" },
-  { health: INITIAL_HEALTH, name: "K5" },
-  { health: INITIAL_HEALTH, name: "K6" },
-];
+const board: Board = Array.from({ length: 6 }, (_, index) => ({
+  health: INITIAL_HEALTH,
+  name: `K${index + 1}`,
+}));
 
 board.forEach((knight, index) => {
   knight.opponent = board[(index + 1) % board.length];
